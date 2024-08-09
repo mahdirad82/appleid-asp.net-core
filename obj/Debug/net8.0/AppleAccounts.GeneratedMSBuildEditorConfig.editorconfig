@@ -9,59 +9,59 @@ build_property.EnforceExtendedAnalyzerRules =
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = AppleAccounts
 build_property.RootNamespace = AppleAccounts
-build_property.ProjectDir = /Users/mahdi/Documents/programing/ASP.NET/AppleAccounts/
+build_property.ProjectDir = /Users/mahdi/Documents/programing/ASP.NET/AppleAccounts/appleid-asp.net-core/
 build_property.EnableComHosting = 
 build_property.EnableGeneratedComInterfaceComImportInterop = 
 build_property.RazorLangVersion = 8.0
 build_property.SupportLocalizedComponentNames = 
 build_property.GenerateRazorMetadataSourceChecksumAttributes = 
-build_property.MSBuildProjectDirectory = /Users/mahdi/Documents/programing/ASP.NET/AppleAccounts
+build_property.MSBuildProjectDirectory = /Users/mahdi/Documents/programing/ASP.NET/AppleAccounts/appleid-asp.net-core
 build_property._RazorSourceGeneratorDebug = 
 
-[/Users/mahdi/Documents/programing/ASP.NET/AppleAccounts/Views/AppleId/Create.cshtml]
+[/Users/mahdi/Documents/programing/ASP.NET/AppleAccounts/appleid-asp.net-core/Views/AppleId/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQXBwbGVJZC9DcmVhdGUuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[/Users/mahdi/Documents/programing/ASP.NET/AppleAccounts/Views/AppleId/Delete.cshtml]
+[/Users/mahdi/Documents/programing/ASP.NET/AppleAccounts/appleid-asp.net-core/Views/AppleId/Delete.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQXBwbGVJZC9EZWxldGUuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[/Users/mahdi/Documents/programing/ASP.NET/AppleAccounts/Views/AppleId/Details.cshtml]
+[/Users/mahdi/Documents/programing/ASP.NET/AppleAccounts/appleid-asp.net-core/Views/AppleId/Details.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQXBwbGVJZC9EZXRhaWxzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[/Users/mahdi/Documents/programing/ASP.NET/AppleAccounts/Views/AppleId/Edit.cshtml]
+[/Users/mahdi/Documents/programing/ASP.NET/AppleAccounts/appleid-asp.net-core/Views/AppleId/Edit.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQXBwbGVJZC9FZGl0LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[/Users/mahdi/Documents/programing/ASP.NET/AppleAccounts/Views/AppleId/Index.cshtml]
+[/Users/mahdi/Documents/programing/ASP.NET/AppleAccounts/appleid-asp.net-core/Views/AppleId/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQXBwbGVJZC9JbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[/Users/mahdi/Documents/programing/ASP.NET/AppleAccounts/Views/Home/Index.cshtml]
+[/Users/mahdi/Documents/programing/ASP.NET/AppleAccounts/appleid-asp.net-core/Views/Home/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvSG9tZS9JbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[/Users/mahdi/Documents/programing/ASP.NET/AppleAccounts/Views/Shared/Error.cshtml]
+[/Users/mahdi/Documents/programing/ASP.NET/AppleAccounts/appleid-asp.net-core/Views/Shared/Error.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvU2hhcmVkL0Vycm9yLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[/Users/mahdi/Documents/programing/ASP.NET/AppleAccounts/Views/Shared/NotFound.cshtml]
+[/Users/mahdi/Documents/programing/ASP.NET/AppleAccounts/appleid-asp.net-core/Views/Shared/NotFound.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvU2hhcmVkL05vdEZvdW5kLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[/Users/mahdi/Documents/programing/ASP.NET/AppleAccounts/Views/Shared/_ValidationScriptsPartial.cshtml]
+[/Users/mahdi/Documents/programing/ASP.NET/AppleAccounts/appleid-asp.net-core/Views/Shared/_ValidationScriptsPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvU2hhcmVkL19WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[/Users/mahdi/Documents/programing/ASP.NET/AppleAccounts/Views/_ViewImports.cshtml]
+[/Users/mahdi/Documents/programing/ASP.NET/AppleAccounts/appleid-asp.net-core/Views/_ViewImports.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvX1ZpZXdJbXBvcnRzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[/Users/mahdi/Documents/programing/ASP.NET/AppleAccounts/Views/_ViewStart.cshtml]
+[/Users/mahdi/Documents/programing/ASP.NET/AppleAccounts/appleid-asp.net-core/Views/_ViewStart.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvX1ZpZXdTdGFydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[/Users/mahdi/Documents/programing/ASP.NET/AppleAccounts/Views/Shared/_Layout.cshtml]
+[/Users/mahdi/Documents/programing/ASP.NET/AppleAccounts/appleid-asp.net-core/Views/Shared/_Layout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvU2hhcmVkL19MYXlvdXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = b-zojm8r5pdy

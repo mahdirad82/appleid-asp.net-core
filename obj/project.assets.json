@@ -2463,11 +2463,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/Users/mahdi/Documents/programing/ASP.NET/AppleAccounts/AppleAccounts.csproj",
+      "projectUniqueName": "/Users/mahdi/Documents/programing/ASP.NET/AppleAccounts/appleid-asp.net-core/AppleAccounts.csproj",
       "projectName": "AppleAccounts",
-      "projectPath": "/Users/mahdi/Documents/programing/ASP.NET/AppleAccounts/AppleAccounts.csproj",
+      "projectPath": "/Users/mahdi/Documents/programing/ASP.NET/AppleAccounts/appleid-asp.net-core/AppleAccounts.csproj",
       "packagesPath": "/Users/mahdi/.nuget/packages/",
-      "outputPath": "/Users/mahdi/Documents/programing/ASP.NET/AppleAccounts/obj/",
+      "outputPath": "/Users/mahdi/Documents/programing/ASP.NET/AppleAccounts/appleid-asp.net-core/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "/Users/mahdi/.nuget/NuGet/NuGet.Config"
