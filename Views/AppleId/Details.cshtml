@@ -1,0 +1,72 @@
+@using AppleAccounts.Data.Enums
+@model AppleId
+@{
+    ViewData["Title"] = "Apple ID Details";
+}
+
+<div class="container mt-lg-5">
+    <div class="row">
+        <div class="col-lg-8 mx-auto">
+            <div class="card shadow">
+                <div class="card-header bg-info text-white position-relative">
+                    <h class="mb-0 display-5">Apple ID </h>
+                    <div class="position-absolute top-50 end-0 translate-middle-y mx-2">
+                        <a asp-action="Edit" asp-route-id="@Model.Id" class="p-0 px-1 btn btn-outline-dark">
+                            <i class="h3 bi bi-pencil-square"></i></a>
+                    </div>
+                </div>
+                <div class="card-body">
+                    <dl class="row">
+                        <dt class="col-sm-4 h4">ID:</dt>
+                        <dd class="col-sm-8 h2 text-danger">@Model.Id</dd>
+
+                        <dt class="col-sm-4 h4">Status:</dt>
+                        <dd class="col-sm-8"><span
+                                class="bg px-1 h3 @(Model.Status.ToString() == "NotActive" ? " text-white bg-success" : "text-dark bg-warning")">
+                                @Model.Status.ToString()
+                            </span>
+                        </dd>
+                        <dt class="col-sm-4 h4">Email:</dt>
+                        <dd class="col-sm-8 text-secondary display-6">@Model.Email</dd>
+
+                        <dt class="col-sm-4 h4">Password:</dt>
+                        <dd class="col-sm-8 text-primary display-6">@Model.Password</dd>
+
+                        <dt class="col-sm-4 h4">Birth Day:</dt>
+                        <dd class="col-sm-8 h3">@Model.BirthDay.ToString("MMMM dd, yyyy")</dd>
+
+                        <dt class="col-sm-4 h4">First question: </dt>
+                        <dd class="col-sm-8 h3">@Model.QuestionOne</dd>
+
+                        <dt class="col-sm-4 h4">Second question: </dt>
+                        <dd class="col-sm-8 h3">@Model.QuestionTwo</dd>
+
+                        <dt class="col-sm-4 h4">Third question: </dt>
+                        <dd class="col-sm-8 h3">@Model.QuestionThree</dd>
+
+                    </dl>
+
+                    <div class="text-lg-end mt-0">
+                        <a asp-action="Index" class="btn btn-primary mx-1">
+                            <i class=""></i>Back to List</a>
+                        <a asp-action="Delete" asp-route-id="@Model.Id" class="btn btn-outline-danger mx-1"
+                            data-toggle="modal">
+                            <i class="bi bi-trash"></i>Delete </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.11.6/umd/popper.min.js"
+        integrity="sha384-oBqDVmMz4fnFO9gybFJ0H0I8+IuG1L5Y8X2E5D1z6hR8G2Vd1A4H3Yz6mG5L5z6k"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
+        integrity="sha384-b4KCu16nyYZujI3tim4d6fdbKj35ScqJa6n5V9DlrU/2ResaBtiXMSR95Qb1KUzD"
+        crossorigin="anonymous"></script>
+}

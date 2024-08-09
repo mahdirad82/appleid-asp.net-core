@@ -1,0 +1,56 @@
+@using AppleAccounts.Data.Enums
+@model AppleId
+@{
+    ViewData["Title"] = "Delete Apple ID";
+}
+
+<div class="container mt-lg-5">
+    <div class="row">
+        <div class="col-lg-8 mx-auto">
+            <div class="card shadow">
+                <div class="card-header bg-danger text-white position-relative">
+                    <h class="mb-0 display-5">Delete Confirmation</h>
+                </div>
+                <div class="card-body">
+                    <dl class="row">
+                        <dt class="col-sm-4 h4">ID:</dt>
+                        <dd class="col-sm-8 h2 text-danger">@Model.Id</dd>
+
+                        <dt class="col-sm-4 h4">Status:</dt>
+                        <dd class="col-sm-8"><span
+                                class="bg px-1 h3 @(Model.Status.ToString() == "NotActive" ? " text-white bg-success" : "text-dark bg-warning")">
+                                @Model.Status.ToString()
+                            </span>
+                        </dd>
+                        <dt class="col-sm-4 h4">Email:</dt>
+                        <dd class="col-sm-8 text-success display-6">@Model.Email</dd>
+
+                    </dl>
+
+                    <div class="mt-0">
+                        <a asp-action="Index" class="btn btn-primary mx-1 d-inline">
+                            <i class=""></i>Back to List</a>
+                        <form asp-action="Delete" method="post" class="d-inline">
+                            <input type="hidden" asp-for="@Model.Id" />
+                            <input type="submit" value="Confirm" class="btn btn-danger float-end" />
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+@section Scripts {
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.11.6/umd/popper.min.js"
+        integrity="sha384-oBqDVmMz4fnFO9gybFJ0H0I8+IuG1L5Y8X2E5D1z6hR8G2Vd1A4H3Yz6mG5L5z6k"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
+        integrity="sha384-b4KCu16nyYZujI3tim4d6fdbKj35ScqJa6n5V9DlrU/2ResaBtiXMSR95Qb1KUzD"
+        crossorigin="anonymous"></script>
+}

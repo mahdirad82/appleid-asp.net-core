@@ -1,0 +1,67 @@
+@model IEnumerable<AppleId>;
+
+@{
+    ViewData["Title"] = "Apple IDs";
+}
+
+@* <h1>@ViewData["Title"]</h1> *@
+
+<p>
+    <a asp-action="Create" class="btn btn-success">Create New Apple ID</a>
+</p>
+
+<div class="border border-primary rounded p-3">
+    <form asp-action="Index" method="get">
+        <label for="statusSelect" class="control-label lead">Filter by Status:</label>
+        <select id="statusSelect" class="form-control w-25 d-inline" name="status"
+            asp-items="Html.GetEnumSelectList<AppleAccounts.Data.Enums.AppleIdStatus>()">
+            <option value="">-- Status --</option>
+        </select>
+        <div class="form-check form-switch m-3">
+            <input name="expired" class="form-check-input lead" type="checkbox" role="switch"
+                id="flexSwitchCheckDefault">
+            <label class="form-check-label lead" for="flexSwitchCheckDefault">Expired</label>
+        </div>
+        <button class="btn btn-outline-primary d-inline mb-1" type="submit"><i class="bi bi-funnel-fill"></i>Filter
+        </button>
+    </form>
+</div>
+
+<div class="table-responsive">
+
+    <table class="table table-striped">
+        <thead>
+            <tr class="h4">
+                <th asp-sort-order="Id">Email</th>
+                <th>Status</th>
+                <th>Birth Day</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var appleId in Model)
+            {
+                <tr class="lead">
+                    <td class="lead">@appleId.Email</td>
+                    <td class="">@appleId.Status</td>
+                    <td>@appleId.BirthDay.ToString("MMMM, d, yyyy")</td>
+                    <td>
+                        <a asp-action="Edit" asp-route-id="@appleId.Id" class="btn btn-outline-secondary">
+                            <i class="bi bi-pencil-fill"></i></a> |
+                        <a asp-action="Details" asp-route-id="@appleId.Id" class="btn btn-outline-info">
+                            <i class="bi bi-info-circle-fill"></i></a> |
+                        <a asp-action="Delete" asp-route-id="@appleId.Id" class="btn btn-outline-danger">
+                            <i class="bi bi-trash-fill"></i></a>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>
+
+@if (!Model.Any())
+{
+    <div class="alert alert-info" role="alert">
+    No Apple IDs found.
+</div>
+}

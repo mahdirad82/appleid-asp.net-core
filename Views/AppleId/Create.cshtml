@@ -1,0 +1,82 @@
+@model AppleId;
+@{
+    ViewData["Title"] = "Create Apple ID";
+}
+@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
+<div class="mb-3">
+    <a class="text-primary lead" asp-action="Index">
+        <i class="bi bi-arrow-up-left"></i>
+        Back to List
+    </a>
+</div>
+<h3>Create Apple ID</h3>
+
+<div>
+    <hr />
+    <form asp-action="Create" style="display: flex; flex-direction: column;">
+        <div style="display: flex; justify-content: space-between; margin-bottom: 10px;">
+            <div style="flex: 1; margin-right: 10px;">
+                <label asp-for="Id" class="control-label lead"></label>
+                <input asp-for="Id" class="form-control" style="width: 150px;" />
+                <span asp-validation-for="Id" class="text-danger"></span>
+            </div>
+            <div style="flex: 1 content; flex-grow: 10;" class="start-0">
+                <label asp-for="Email" class="control-label lead"></label>
+                <input asp-for="Email" class="form-control" />
+                <span asp-validation-for="Email" class="text-danger"></span>
+            </div>
+        </div>
+        <div style="display: flex; justify-content: space-between; margin-bottom: 10px;">
+            <div style="flex: 1; margin-right: 10px;">
+                <label asp-for="Password" class="control-label lead"></label>
+                <input asp-for="Password" class="form-control" id="GeneratedPassword" />
+                <span asp-validation-for="Password" class="text-danger"></span>
+                <button type="button" id="generatePasswordButton" class="btn btn-secondary"
+                    style="margin-top: 5px;">Generate Password</button>
+            </div>
+            <div style="flex: 1;">
+                <label asp-for="BirthDay" class="control-label lead"></label>
+                <input asp-for="BirthDay" id="dateInput" class="form-control" type="date" />
+                <span asp-validation-for="BirthDay" class="text-danger"></span>
+            </div>
+        </div>
+
+        <div style="margin-bottom: 10px;">
+            <label asp-for="QuestionOne" class="control-label lead"></label>
+            <input asp-for="QuestionOne" class="form-control" />
+            <span asp-validation-for="QuestionOne" class="text-danger"></span>
+        </div>
+        <div style="margin-bottom: 10px;">
+            <label asp-for="QuestionTwo" class="control-label lead"></label>
+            <input asp-for="QuestionTwo" class="form-control" />
+            <span asp-validation-for="QuestionTwo" class="text-danger"></span>
+        </div>
+        <div style="margin-bottom: 10px;">
+            <label asp-for="QuestionThree" class="control-label lead"></label>
+            <input asp-for="QuestionThree" class="form-control" />
+            <span asp-validation-for="QuestionThree" class="text-danger"></span>
+        </div>
+        <div style="display: flex; justify-content: space-between; margin-bottom: 10px;">
+            <div style="flex: 1;">
+                <label asp-for="Status" class="control-label lead"></label>
+                <select asp-for="Status" class="form-control"
+                    asp-items="Html.GetEnumSelectList<AppleAccounts.Data.Enums.AppleIdStatus>()">
+                    <option value="">Select Status</option>
+                </select>
+                <span asp-validation-for="Status" class="text-danger"></span>
+            </div>
+        </div>
+        <div class="form-group" style="margin-top: 20px;">
+            <input type="submit" value="Create" class="btn btn-success" style="margin-left: auto;" />
+        </div>
+    </form>
+</div>
+
+
+
+<script src="~/js/site.js"></script>
+@section Scripts {
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+}
