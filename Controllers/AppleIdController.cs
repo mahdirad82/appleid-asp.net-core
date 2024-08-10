@@ -20,6 +20,7 @@ namespace AppleAccounts.Controllers
         public async Task<IActionResult> Details(int id)
         {
             var appleIdDetails = await _service.GetAppleId(id);
+            ViewData["Message"] = "Apple id does not exist";
             if (appleIdDetails == null) return View("NotFound");
             return View(appleIdDetails);
         }
