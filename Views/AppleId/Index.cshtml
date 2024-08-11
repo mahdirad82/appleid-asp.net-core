@@ -7,7 +7,7 @@
 @* <h1>@ViewData["Title"]</h1> *@
 
 <p>
-    <a asp-action="Create" class="btn btn-success">Create New Apple ID</a>
+    <a asp-action="Create" class="btn btn-outline-success">Create New Apple ID</a>
 </p>
 
 <div class="border border-primary rounded p-3">
@@ -31,6 +31,7 @@
 
     <table class="table table-striped">
         <thead>
+
             <tr class="h4">
                 <th asp-sort-order="Id">Email</th>
                 <th>Status</th>
@@ -39,8 +40,11 @@
             </tr>
         </thead>
         <tbody>
+
             @foreach (var appleId in Model)
             {
+
+
                 <tr class="lead">
                     <td class="lead">@appleId.Email</td>
                     <td class="">@appleId.Status</td>
@@ -54,7 +58,9 @@
                             <i class="bi bi-trash-fill"></i></a>
                     </td>
                 </tr>
+
             }
+
         </tbody>
     </table>
 </div>

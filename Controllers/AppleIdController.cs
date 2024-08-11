@@ -7,6 +7,7 @@ namespace AppleAccounts.Controllers
     public class AppleIdController(IAppleIdService service) : Controller
     {
         private readonly IAppleIdService _service = service;
+
         public async Task<IActionResult> Index(string status, string expired)
         {
             bool expiredIsOn = !(string.IsNullOrEmpty(expired) || expired.Equals("off"));
