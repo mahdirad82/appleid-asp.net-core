@@ -44,5 +44,12 @@ namespace AppleAccounts.Data.Services
             _context.AppleIds.Remove(result);
             await _context.SaveChangesAsync();
         }
+
+        public async Task<IEnumerable<AppleId>> GetAppleIds(string searchPhrase)
+        {
+            return await _context.AppleIds.Where(i =>
+                i.Email.Contains(searchPhrase) || i.Id.ToString().Contains(searchPhrase))
+                .ToListAsync();
+        }
     }
 }

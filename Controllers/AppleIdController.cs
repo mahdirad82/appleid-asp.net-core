@@ -1,6 +1,7 @@
 using AppleAccounts.Data.Services;
 using AppleAccounts.Models;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore.Storage.ValueConversion.Internal;
 
 namespace AppleAccounts.Controllers
 {
@@ -8,9 +9,25 @@ namespace AppleAccounts.Controllers
     {
         private readonly IAppleIdService _service = service;
 
-        public async Task<IActionResult> Index(string status, string expired)
+        public async Task<IActionResult> Index(string status, string expired, string searchPhrase)
         {
-            bool expiredIsOn = !(string.IsNullOrEmpty(expired) || expired.Equals("off"));
+            bool expiredIsOn = false;
+
+            if (expired is not null)
+            {
+                ViewBag.expired = true;
+                expiredIsOn = expired.Equals("on");
+            }
+            ViewBag.expired = expiredIsOn;
+
+            if (searchPhrase is not null)
+            {
+
+                ViewBag.search = searchPhrase;
+                return View(await _service.GetAppleIds(searchPhrase));
+            }
+            ViewBag.search = string.Empty;
+
 
             if (string.IsNullOrEmpty(status))
                 return View(await _service.GetAppleIds(expiredIsOn));
@@ -40,7 +57,7 @@ namespace AppleAccounts.Controllers
             {
                 await _service.AddAsync(appleId);
 
-                return RedirectToAction(nameof(Index)); // Assumes you have an Index action  
+                return RedirectToAction(nameof(Index));
             }
             return View(appleId);
         }
@@ -52,7 +69,7 @@ namespace AppleAccounts.Controllers
             return View(appleIdDetails);
         }
 
-        // POST: AppleId/Create  
+
         [HttpPost]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Edit(int id, AppleId appleId)

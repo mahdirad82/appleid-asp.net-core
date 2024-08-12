@@ -30,6 +30,14 @@
                                 ID</a>
                         </li>
                     </ul>
+                    <form class="form float d-sm-inline-flex justify-content-between" asp-controller="AppleId"
+                        asp-action="Index">
+
+                        <input placeholder="Search AppleId" value="@ViewBag.search" name="searchPhrase"
+                            class="form-control" type="text">
+                        <button type="submit" class="mx-1 border-0 btn btn-outline-secondary"><i
+                                class="bi bi-search"></i></button>
+                    </form>
                 </div>
             </div>
         </nav>
@@ -42,7 +50,7 @@
 
     <footer class="border-top footer text-muted">
         <div class="container">
-            &copy; 2024 - AppleAccounts
+            &copy; 2024 - AppleAccounts by &mfr;&acirc;&hbar;&dopf;&igrave;
         </div>
     </footer>
     <script src="~/lib/jquery/dist/jquery.min.js"></script>

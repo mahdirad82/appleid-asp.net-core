@@ -3,9 +3,6 @@
 @{
     ViewData["Title"] = "Apple IDs";
 }
-
-@* <h1>@ViewData["Title"]</h1> *@
-
 <p>
     <a asp-action="Create" class="btn btn-outline-success">Create New Apple ID</a>
 </p>
@@ -18,11 +15,11 @@
             <option value="">-- Status --</option>
         </select>
         <div class="form-check form-switch m-3">
-            <input name="expired" class="form-check-input lead" type="checkbox" role="switch"
-                id="flexSwitchCheckDefault">
-            <label class="form-check-label lead" for="flexSwitchCheckDefault">Expired</label>
+            <input name="expired" class="form-check-input lead" type="checkbox" role="switch" id="expired"
+                @if (ViewBag.expired) {<text>checked</text>}>
+            <label class=" form-check-label lead" for="expired">Expired</label>
         </div>
-        <button class="btn btn-outline-primary d-inline mb-1" type="submit"><i class="bi bi-funnel-fill"></i>Filter
+        <button class=" btn btn-outline-primary d-inline mb-1" type="submit"><i class="bi bi-funnel-fill"></i>Filter
         </button>
     </form>
 </div>
