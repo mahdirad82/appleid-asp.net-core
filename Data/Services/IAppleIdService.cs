@@ -4,9 +4,7 @@ namespace AppleAccounts.Data.Services
 {
     public interface IAppleIdService
     {
-        Task<IEnumerable<AppleId>> GetAppleIds(int status, bool expired);
-        Task<IEnumerable<AppleId>> GetAppleIds(bool expired);
-        Task<IEnumerable<AppleId>> GetAppleIds(string searchPhrase);
+        Task<IEnumerable<AppleId>> GetAppleIds(bool expired, string? status = null, string? filterQuery = null);
         Task<AppleId> GetAppleId(int id);
         Task AddAsync(AppleId appleId);
         Task<AppleId> UpdateAsync(int id, AppleId newAppleId);

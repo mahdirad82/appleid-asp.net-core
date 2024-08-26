@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "/Users/mahdi/Documents/programing/ASP.NET/AppleAccounts/appleid-asp.net-core/AppleAccounts.csproj": {}
+    "/Users/mahdi/Documents/Programming/ASP.NET/AppleAccounts/appleid-asp.net-core/AppleAccounts.csproj": {}
   },
   "projects": {
-    "/Users/mahdi/Documents/programing/ASP.NET/AppleAccounts/appleid-asp.net-core/AppleAccounts.csproj": {
+    "/Users/mahdi/Documents/Programming/ASP.NET/AppleAccounts/appleid-asp.net-core/AppleAccounts.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/mahdi/Documents/programing/ASP.NET/AppleAccounts/appleid-asp.net-core/AppleAccounts.csproj",
+        "projectUniqueName": "/Users/mahdi/Documents/Programming/ASP.NET/AppleAccounts/appleid-asp.net-core/AppleAccounts.csproj",
         "projectName": "AppleAccounts",
-        "projectPath": "/Users/mahdi/Documents/programing/ASP.NET/AppleAccounts/appleid-asp.net-core/AppleAccounts.csproj",
+        "projectPath": "/Users/mahdi/Documents/Programming/ASP.NET/AppleAccounts/appleid-asp.net-core/AppleAccounts.csproj",
         "packagesPath": "/Users/mahdi/.nuget/packages/",
-        "outputPath": "/Users/mahdi/Documents/programing/ASP.NET/AppleAccounts/appleid-asp.net-core/obj/",
+        "outputPath": "/Users/mahdi/Documents/Programming/ASP.NET/AppleAccounts/appleid-asp.net-core/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "/Users/mahdi/.nuget/NuGet/NuGet.Config"
@@ -56,6 +56,10 @@
             "Pomelo.EntityFrameworkCore.MySql": {
               "target": "Package",
               "version": "[8.0.2, )"
+            },
+            "Swashbuckle.AspNetCore": {
+              "target": "Package",
+              "version": "[6.6.2, )"
             },
             "System.Runtime": {
               "target": "Package",
