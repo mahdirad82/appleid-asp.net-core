@@ -9,10 +9,19 @@
 
 <div class="border border-primary rounded p-3">
     <form asp-action="Index" method="get">
+        <div class="mb-3">
+        <label for="orderSelect" class="control-label lead">Sort By: </label>
+        <select id="orderSelect" class="w-25 form-control d-inline" name="order">
+            <option value="">--Order--</option>
+            <option value="status">Status</option>
+            <option value="email">Email</option>
+            <option value="birth">Birth Day</option>
+        </select>
+        </div>
         <label for="statusSelect" class="control-label lead">Filter by Status:</label>
         <select id="statusSelect" class="form-control w-25 d-inline" name="status"
             asp-items="Html.GetEnumSelectList<AppleAccounts.Data.Enums.AppleIdStatus>()">
-            <option value="">-- Status --</option>
+            <option value=@ViewBag.statusVal>@ViewBag.status</option>
         </select>
         <div class="form-check form-switch m-3">
             <input name="expired" class="form-check-input lead" type="checkbox" role="switch" id="expired"
@@ -45,7 +54,7 @@
                 <tr class="lead">
                     <td class="lead">@appleId.Email</td>
                     <td class="">@appleId.Status</td>
-                    <td>@appleId.BirthDay.ToString("MMMM, d, yyyy")</td>
+                    <td>@TimeZoneInfo.ConvertTimeToUtc(appleId.BirthDay).ToString("MMMM, d, yyyy")</td>
                     <td>
                         <a asp-action="Edit" asp-route-id="@appleId.Id" class="border-0 rounded-pill border-0 btn btn-outline-secondary">
                             <i class="bi bi-pencil-fill"></i></a> |

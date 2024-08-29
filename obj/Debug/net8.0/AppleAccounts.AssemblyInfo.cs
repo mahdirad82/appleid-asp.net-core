@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("AppleAccounts")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+7b50bcaf5b7b6cdf8f51e2535cb84f5e4b9e0a6a")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+bb699f8efb8231d4594d87f60193bd77f6809d06")]
 [assembly: System.Reflection.AssemblyProductAttribute("AppleAccounts")]
 [assembly: System.Reflection.AssemblyTitleAttribute("AppleAccounts")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

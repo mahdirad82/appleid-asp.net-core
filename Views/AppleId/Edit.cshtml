@@ -4,6 +4,13 @@
 }
 @addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
 
+<div class="mb-3">
+    <a class="text-primary lead" asp-action="Index">
+        <i class="bi bi-arrow-up-left"></i>
+        Back to List
+    </a>
+</div>
+
 <h1>Update Apple ID</h1>
 
 <div>
@@ -71,12 +78,6 @@
     </form>
 </div>
 
-<div class="mt-4">
-    <a class="text-primary" asp-action="Index">
-        <i class="bi bi-arrow-up-left"></i>
-        Back to List
-    </a>
-</div>
 
 @section Scripts {
     @{

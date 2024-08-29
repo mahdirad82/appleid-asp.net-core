@@ -8,7 +8,7 @@ public class AppleIdApiController(IAppleIdService service) : ControllerBase
 {
     private readonly IAppleIdService _service = service;
     [HttpGet]
-    public async Task<IActionResult> Get([FromQuery] string? expired, [FromQuery] string? filterQuery) => Ok(await _service.GetAppleIds(!string.IsNullOrWhiteSpace(expired), filterQuery));
+    public async Task<IActionResult> Get([FromQuery] string? expired, [FromQuery] string? status, [FromQuery] string? filterQuery, [FromQuery] string? order) => Ok(await _service.GetAppleIds(!string.IsNullOrWhiteSpace(expired) && expired.Equals("on"), status, filterQuery, order));
 
     [HttpGet("{id}")]
     [Tags("Get AppleId by ID")]

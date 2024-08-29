@@ -14,11 +14,8 @@ namespace AppleAccounts.Data.Services
             await _context.SaveChangesAsync();
         }
 
-        public async Task<AppleId> GetAppleId(int id)
-        {
-            var result = await _context.AppleIds.FirstOrDefaultAsync(n => n.Id == id);
-            return result;
-        }
+        public async Task<AppleId?> GetAppleId(int id) => await _context.AppleIds.FirstOrDefaultAsync(n => n.Id == id);
+
 
         public async Task<AppleId> UpdateAsync(int id, AppleId newAppleId)
         {
@@ -37,7 +34,7 @@ namespace AppleAccounts.Data.Services
             }
         }
 
-        public async Task<IEnumerable<AppleId>> GetAppleIds(bool expired, string? status = null, string? filterQuery = "")
+        public async Task<IEnumerable<AppleId>> GetAppleIds(bool expired, string? status = null, string? filterQuery = "", string? order = null)
         {
             IQueryable<AppleId> appleIds = _context.AppleIds.AsQueryable().Where(i => i.Expired == expired);
             if (!string.IsNullOrEmpty(filterQuery))
@@ -48,6 +45,18 @@ namespace AppleAccounts.Data.Services
                 if (int.TryParse(status, out int id))
                     appleIds = appleIds.Where(i => i.Status == (AppleIdStatus)id);
             }
+            if (!string.IsNullOrWhiteSpace(order))
+            {
+                if (order.Equals("status", StringComparison.OrdinalIgnoreCase))
+                    appleIds = appleIds.OrderBy(i => i.Status);
+
+                if (order.Equals("email", StringComparison.OrdinalIgnoreCase))
+                    appleIds = appleIds.OrderBy(i => i.Email);
+
+                if (order.Equals("birth", StringComparison.OrdinalIgnoreCase))
+                    appleIds = appleIds.OrderBy(i => i.BirthDay);
+            }
+
             return await appleIds.ToListAsync();
         }
     }

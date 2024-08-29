@@ -21,7 +21,9 @@ namespace AppleAccounts.Models
         public required string Password { get; set; }
 
         [Display(Name = "Birth day")]
-        public DateOnly BirthDay { get; set; }
+        [DataType(DataType.Date)]
+        public DateTime BirthDay { get; set; }
+        
 
         [Display(Name = "What is the first name of your best friend in highschool?")]
         [Required(ErrorMessage = "Security Question is required!")]
