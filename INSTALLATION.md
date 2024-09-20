@@ -19,6 +19,7 @@ Before you begin, ensure you have the following installed on your machine:
    ```bash  
    git clone https://github.com/mahdirad82/appleid-asp.net-core.git  
    cd appleid-asp.net-core
+   ```
    
 2. **Restore dependencies**  
 
