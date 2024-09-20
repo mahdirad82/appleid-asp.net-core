@@ -9,7 +9,8 @@ The Apple ID Management System is a web application developed using ASP.NET Core
 - **CRUD Operations:** Create, read, update, and delete Apple ID records.  
 - **Search and Filtering:** Easily search for specific Apple IDs and apply filters to find records quickly.  
 - **Data Validation:** User-friendly form inputs with real-time validation.  
-- **Responsive Design:** Mobile and desktop-friendly user interface.  
+- **Responsive Design:** Mobile and desktop-friendly user interface.
+- **API controllers** that allow you to interact with the Apple ID Management System programmatically.
 
 ## Technologies Used  
 
