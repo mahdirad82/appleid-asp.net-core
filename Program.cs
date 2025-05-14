@@ -15,6 +15,9 @@ public class Program
         builder.Services.AddEndpointsApiExplorer();
         builder.Services.AddSwaggerGen();
 
+
+
+
         // Add DbContext configuration
         builder.Services.AddDbContext<AppDbContext>(options =>
         {
